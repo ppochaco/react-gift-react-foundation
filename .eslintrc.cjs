@@ -4,8 +4,10 @@ module.exports = {
         "es2021": true
     },
     "extends": [
-        "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "airbnb/hooks",
+        "airbnb-typescript",
         "plugin:react/recommended"
     ],
     "overrides": [
@@ -24,7 +26,8 @@ module.exports = {
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": ["tsconfig.app.json"]
     },
     "plugins": [
         "@typescript-eslint",
