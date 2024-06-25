@@ -22,8 +22,8 @@ FE 카카오 선물하기 1주차 과제: React 기초
 
 #### 코드 스타일
 
-- [ ] ESLint, Prettier 추가
-- [ ] Lint 룰 세팅
+- [x] ESLint, Prettier 추가
+- [x] Lint 룰 세팅
 
 #### style 관련 설정
 
