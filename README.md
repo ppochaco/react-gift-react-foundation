@@ -16,9 +16,9 @@ FE 카카오 선물하기 1주차 과제: React 기초
 
 #### TypeScript 관련 설정
 
-- [ ] Typescript 세팅
+- [x] Typescript 세팅
 - [ ] alias 설정
-- [ ] tsconfig 설정
+- [x] tsconfig 설정
 
 #### 코드 스타일
 
