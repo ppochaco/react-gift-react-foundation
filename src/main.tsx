@@ -4,8 +4,8 @@ import './index.css';
 
 const rootElement = document.getElementById('root');
 
-if (rootElement) {
-  ReactDOM.createRoot(rootElement).render(<App />);
-} else {
-  console.error('Root element가 존재하지 않습니다.');
+if (!rootElement) {
+  throw new Error('Root element가 존재하지 않습니다.');
 }
+
+ReactDOM.createRoot(rootElement).render(<App />);
