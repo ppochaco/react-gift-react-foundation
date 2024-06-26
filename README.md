@@ -28,4 +28,4 @@ FE 카카오 선물하기 1주차 과제: React 기초
 #### style 관련 설정
 
 - [x] emotion 스타일 라이브러리 추가
-- [ ] reset css 적용
+- [x] reset css 적용
