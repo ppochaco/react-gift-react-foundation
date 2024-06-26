@@ -24,6 +24,7 @@ FE 카카오 선물하기 1주차 과제: React 기초
 
 - [x] ESLint, Prettier 추가
 - [x] Lint 룰 세팅
+- [ ] prettier로 import 순서 정렬하기
 
 #### style 관련 설정
 
