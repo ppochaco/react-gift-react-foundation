@@ -26,7 +26,10 @@
     /* Alias */
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+
+    /* emotion */
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["src"]
 }
