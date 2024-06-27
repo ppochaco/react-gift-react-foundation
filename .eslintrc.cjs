@@ -31,7 +31,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
-    '@typescript-eslint/dot-notation': 'error',
     'react/react-in-jsx-scope': 'off',
   },
 };
