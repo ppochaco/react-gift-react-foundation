@@ -31,5 +31,5 @@
     /* emotion */
     "jsxImportSource": "@emotion/react"
   },
-  "include": ["src"]
+  "include": ["src", ".eslintrc.cjs"]
 }

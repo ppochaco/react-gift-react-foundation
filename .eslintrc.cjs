@@ -4,10 +4,10 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:@typescript-eslint/recommended',
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
   ],
@@ -22,11 +22,16 @@ module.exports = {
       },
     },
   ],
+  ignorePatterns: ['vite.config.ts'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project: ['./tsconfig.app.json'],
   },
   plugins: ['@typescript-eslint', 'react', 'prettier'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/dot-notation': 'error',
+    'react/react-in-jsx-scope': 'off',
+  },
 };
