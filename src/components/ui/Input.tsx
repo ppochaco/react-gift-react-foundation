@@ -47,23 +47,14 @@ const inputSizeStyles: {
   },
 };
 
-interface InputProps
+export interface InputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   size?: 'small' | 'large' | 'response';
   invalid?: boolean;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      className = '',
-      size = 'small',
-      invalid = false,
-      disabled = false,
-      ...props
-    },
-    ref
-  ) => {
+  ({ size = 'small', invalid = false, disabled = false, ...props }, ref) => {
     const inputStyle = css({
       borderBottom: '1px solid #cccccc',
       outline: 'none',
@@ -74,18 +65,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       ...(!disabled && !invalid && inputStateStyles.default),
     });
 
-    return (
-      <input
-        className={className}
-        disabled={disabled}
-        css={inputStyle}
-        ref={ref}
-        {...props}
-      />
-    );
+    return <input disabled={disabled} css={inputStyle} ref={ref} {...props} />;
   }
 );
 
 Input.displayName = 'Input';
 
-export default Input;
+export { Input };
