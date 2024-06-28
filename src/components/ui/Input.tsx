@@ -24,13 +24,13 @@ const inputStateStyles: {
 };
 
 const inputSizeStyles: {
-  [key in 'sm' | 'md' | 'response']: CSSObject;
+  [key in 'small' | 'large' | 'response']: CSSObject;
 } = {
-  sm: {
+  small: {
     height: '2rem',
     fontSize: '0.875rem',
   },
-  md: {
+  large: {
     height: '2.25rem',
     fontSize: '1rem',
   },
@@ -49,7 +49,7 @@ const inputSizeStyles: {
 
 interface InputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
-  size?: 'sm' | 'md' | 'response';
+  size?: 'small' | 'large' | 'response';
   invalid?: boolean;
 }
 
@@ -57,7 +57,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
       className = '',
-      size = 'sm',
+      size = 'small',
       invalid = false,
       disabled = false,
       ...props
