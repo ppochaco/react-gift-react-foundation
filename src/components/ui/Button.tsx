@@ -66,12 +66,12 @@ const sizeStyles: {
   },
 };
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: 'kakao' | 'outline' | 'black' | 'lightGray' | 'darkGray';
   size?: 'small' | 'large' | 'response';
 }
 
-const Button = ({
+export const Button = ({
   className = '',
   children,
   onClick,
@@ -96,5 +96,3 @@ const Button = ({
     </button>
   );
 };
-
-export default Button;
