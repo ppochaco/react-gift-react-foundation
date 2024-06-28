@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Input } from '@/components/ui/Input';
+import { Input, InputProps } from '@/components/ui/Input';
 
-const meta = {
+const meta: Meta<InputProps> = {
   title: 'Example/Input',
   component: Input,
   parameters: {
@@ -10,18 +10,14 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    invalid: {
-      control: 'boolean',
-    },
+    invalid: { control: 'boolean' },
     size: {
-      control: {
-        type: 'select',
-        options: ['small', 'large', 'response'],
-      },
+      control: 'select',
+      options: ['small', 'large', 'response'],
     },
   },
   args: { placeholder: 'placeholder' },
-} satisfies Meta<typeof Input>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
