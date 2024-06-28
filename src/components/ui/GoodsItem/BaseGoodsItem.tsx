@@ -7,26 +7,6 @@ interface BaseGoodsItemProps {
   amount: string;
 }
 
-const BaseGoodsItem = ({
-  imageComponent,
-  subtitle,
-  title,
-  amount,
-}: BaseGoodsItemProps) => {
-  return (
-    <div css={containerStyle}>
-      {imageComponent}
-      <div css={textContainerStyle}>
-        <p css={subtitleStyle}>{subtitle}</p>
-        <h2 css={titleStyle}>{title}</h2>
-        <p css={amountStyle}>{amount}원</p>
-      </div>
-    </div>
-  );
-};
-
-export default BaseGoodsItem;
-
 const containerStyle = css({
   display: 'flex',
   flexDirection: 'column',
@@ -68,3 +48,21 @@ const amountStyle = css({
   margin: '0',
   wordBreak: 'break-all',
 });
+
+export const BaseGoodsItem = ({
+  imageComponent,
+  subtitle,
+  title,
+  amount,
+}: BaseGoodsItemProps) => {
+  return (
+    <div css={containerStyle}>
+      {imageComponent}
+      <div css={textContainerStyle}>
+        <p css={subtitleStyle}>{subtitle}</p>
+        <h2 css={titleStyle}>{title}</h2>
+        <p css={amountStyle}>{amount}원</p>
+      </div>
+    </div>
+  );
+};

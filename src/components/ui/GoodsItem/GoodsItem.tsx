@@ -1,5 +1,6 @@
-import Image from '../Image';
-import BaseGoodsItem from './BaseGoodsItem';
+import { Image } from '@/components/ui/Image';
+
+import { BaseGoodsItem } from './BaseGoodsItem';
 
 interface GoodsItemProps {
   imageSrc: string;

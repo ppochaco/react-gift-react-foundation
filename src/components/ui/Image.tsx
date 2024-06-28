@@ -7,18 +7,6 @@ export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   width: string;
 }
 
-const Image = ({ ratio = 16 / 9, radius = 0, width, ...props }: ImageProps) => {
-  return (
-    <div css={boxStyle(width)}>
-      <div css={wrapperStyle(ratio)}>
-        <img css={imageStyle(radius)} {...props} />
-      </div>
-    </div>
-  );
-};
-
-export default Image;
-
 const boxStyle = (boxWidth: string) =>
   css({
     width: boxWidth,
@@ -57,3 +45,18 @@ export const imageStyle = (radius?: number | 'circle') =>
     objectFit: 'cover',
     borderRadius: radius !== undefined ? getBorderRadius(radius) : '0',
   });
+
+export const Image = ({
+  ratio = 16 / 9,
+  radius = 0,
+  width,
+  ...props
+}: ImageProps) => {
+  return (
+    <div css={boxStyle(width)}>
+      <div css={wrapperStyle(ratio)}>
+        <img css={imageStyle(radius)} {...props} />
+      </div>
+    </div>
+  );
+};

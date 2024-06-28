@@ -10,6 +10,20 @@ type JustifyContent =
   | 'space-around';
 type AlignItems = 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'stretch';
 
+const containerStyle = (
+  maxWidth?: string,
+  flexDirection?: FlexDirection,
+  justifyContent?: JustifyContent,
+  alignItems?: AlignItems
+) =>
+  css({
+    display: 'flex',
+    maxWidth,
+    flexDirection,
+    justifyContent,
+    alignItems,
+  });
+
 interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   maxWidth?: string;
@@ -35,17 +49,3 @@ export const Container = ({
     </div>
   );
 };
-
-const containerStyle = (
-  maxWidth?: string,
-  flexDirection?: FlexDirection,
-  justifyContent?: JustifyContent,
-  alignItems?: AlignItems
-) =>
-  css({
-    display: 'flex',
-    maxWidth,
-    flexDirection,
-    justifyContent,
-    alignItems,
-  });

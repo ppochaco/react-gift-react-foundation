@@ -35,7 +35,7 @@ const imageWrapperStyle = css({
   display: 'inline-block',
 });
 
-const RankedImage = ({
+export const RankedImage = ({
   rank,
   imageSrc,
   alt,
@@ -55,5 +55,3 @@ const RankedImage = ({
     </div>
   );
 };
-
-export default RankedImage;

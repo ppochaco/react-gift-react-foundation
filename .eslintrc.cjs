@@ -3,7 +3,15 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'airbnb', 'airbnb/hooks', 'airbnb-typescript', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'airbnb',
+    'airbnb/hooks',
+    'airbnb-typescript',
+    'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
+  ],
   overrides: [
     {
       env: {
@@ -12,6 +20,12 @@ module.exports = {
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
         sourceType: 'script',
+      },
+    },
+    {
+      files: ['**/*.stories.*', '**/*.test.*'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
       },
     },
   ],
@@ -34,11 +48,24 @@ module.exports = {
       2,
       { namedComponents: 'arrow-function' },
     ],
-    settings: {
-      'import/resolver': {
-        node: {
-          extensions: ['.ts', '.tsx', '.js', '.jsx'],
-        },
+    'import/no-default-export': 'off',
+    'import/prefer-default-export': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        '': 'never',
+        ts: 'never',
+        tsx: 'never',
+        js: 'never',
+        jsx: 'never',
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
       },
     },
   },
