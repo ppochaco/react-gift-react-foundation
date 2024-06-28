@@ -14,7 +14,7 @@ FE 카카오 선물하기 1주차 과제: React 기초
 #### 공통 컴포넌트 구현
 
 - [x] Button
-- [ ] Input
+- [x] Input
 - [ ] Image
 - [ ] GoodsItem
 - [ ] Grid
