@@ -16,7 +16,7 @@ FE 카카오 선물하기 1주차 과제: React 기초
 - [x] Button
 - [x] Input
 - [x] Image
-- [ ] GoodsItem
+- [x] GoodsItem
 - [ ] Grid
 - [ ] Container
 

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import React from 'react';
 
-interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   ratio?: number | 'square';
   radius?: number | 'circle';
 }
@@ -20,7 +20,7 @@ const getBorderRadius = (radius: number | 'circle'): string => {
   return `${radius}px`;
 };
 
-const wrapperStyle = (ratio?: number | 'square') =>
+export const wrapperStyle = (ratio?: number | 'square') =>
   css({
     position: 'relative',
     width: '100%',
@@ -28,7 +28,7 @@ const wrapperStyle = (ratio?: number | 'square') =>
     overflow: 'hidden',
   });
 
-const imageStyle = (radius?: number | 'circle') =>
+export const imageStyle = (radius?: number | 'circle') =>
   css({
     position: 'absolute',
     top: 0,
