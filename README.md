@@ -17,7 +17,7 @@ FE 카카오 선물하기 1주차 과제: React 기초
 - [x] Input
 - [x] Image
 - [x] GoodsItem
-- [ ] Grid
+- [x] Grid
 - [x] Container
 
 #### story 추가하기
@@ -30,5 +30,5 @@ FE 카카오 선물하기 1주차 과제: React 기초
   - [x] default
   - [x] ranking
 - Layout
-  - [ ] Grid
+  - [x] Grid
   - [x] Container
