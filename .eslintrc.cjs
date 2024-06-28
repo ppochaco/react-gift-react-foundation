@@ -41,5 +41,12 @@ module.exports = {
       2,
       { namedComponents: 'arrow-function' },
     ],
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        },
+      },
+    },
   },
 };

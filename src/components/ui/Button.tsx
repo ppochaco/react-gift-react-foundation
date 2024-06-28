@@ -28,7 +28,7 @@ const themeStyles: {
   },
 };
 
-export const sizeStyles: {
+const sizeStyles: {
   [key in 'sm' | 'md' | 'response']: CSSObject;
 } = {
   sm: {
@@ -83,4 +83,4 @@ const Button = ({
   );
 };
 
-export { Button };
+export default Button;
