@@ -6,7 +6,11 @@ import RankingGoodsItem from './components/ui/GoodsItem/RankingGoodsItem';
 const App = () => {
   return (
     <div>
-      <Image width="400px" src="https://picsum.photos/536/354" />
+      <Image
+        width="400px"
+        src="https://picsum.photos/536/354"
+        alt="테스트용 사진"
+      />
       <GoodsItem
         imageSrc="https://t1.kakaocdn.net/friends/www/talk/kakaofriends_talk_2018.png"
         subtitle="카카오 프렌즈 특별 한정판"
