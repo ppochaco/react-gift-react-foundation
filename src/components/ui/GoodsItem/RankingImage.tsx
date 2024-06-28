@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import Image from '../Image';
+import { Image } from '@/components/ui/Image';
 
 interface RankedImageProps {
   rank: number;
