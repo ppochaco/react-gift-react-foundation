@@ -23,11 +23,12 @@ FE 카카오 선물하기 1주차 과제: React 기초
 #### story 추가하기
 
 - [x] Button
-- [x] Input
-- [ ] Image
+- Form
+  - [x] Input
+- [x] Image
 - GoodsItem
-  - [ ] default
-  - [ ] ranking
+  - [x] default
+  - [x] ranking
 - Layout
   - [ ] Grid
   - [ ] Container

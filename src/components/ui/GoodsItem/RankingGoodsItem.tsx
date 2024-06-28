@@ -9,7 +9,7 @@ interface RankingGoodsItemProps {
   amount: string;
 }
 
-const RankingGoodsItem = ({
+export const RankingGoodsItem = ({
   rank,
   imageSrc,
   subtitle,
@@ -33,5 +33,3 @@ const RankingGoodsItem = ({
     />
   );
 };
-
-export default RankingGoodsItem;

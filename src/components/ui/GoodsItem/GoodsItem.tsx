@@ -8,7 +8,12 @@ interface GoodsItemProps {
   amount: string;
 }
 
-const GoodsItem = ({ imageSrc, subtitle, title, amount }: GoodsItemProps) => {
+export const GoodsItem = ({
+  imageSrc,
+  subtitle,
+  title,
+  amount,
+}: GoodsItemProps) => {
   return (
     <BaseGoodsItem
       imageComponent={
@@ -26,5 +31,3 @@ const GoodsItem = ({ imageSrc, subtitle, title, amount }: GoodsItemProps) => {
     />
   );
 };
-
-export default GoodsItem;
