@@ -40,10 +40,10 @@ export const gridStyle = (gap: number, columns: Column) => {
     '@media (min-width: 1024px)': {
       gridTemplateColumns: `repeat(${columns.lg}, 1fr)`,
     },
-    '@media (min-width: 768px) and (max-width: 1199px)': {
+    '@media (min-width: 768px) and (max-width: 1024px)': {
       gridTemplateColumns: `repeat(${columns.md}, 1fr)`,
     },
-    '@media (min-width: 500px) and (max-width: 991px)': {
+    '@media (min-width: 500px) and (max-width: 768px)': {
       gridTemplateColumns: `repeat(${columns.sm}, 1fr)`,
     },
     '@media (max-width: 350px)': {
