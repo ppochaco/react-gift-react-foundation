@@ -1,21 +1,12 @@
-import { css } from '@emotion/react';
-
 import Image from '@/components/ui/Image';
 
 import GoodsItem from './components/ui/GoodsItem/GoodsItem';
 import RankingGoodsItem from './components/ui/GoodsItem/RankingGoodsItem';
 
-const imageStyle = css({
-  width: '400px',
-  height: 'auto',
-});
-
 const App = () => {
   return (
     <div>
-      <div css={imageStyle}>
-        <Image src="https://picsum.photos/536/354" />
-      </div>
+      <Image width="400px" src="https://picsum.photos/536/354" />
       <GoodsItem
         imageSrc="https://t1.kakaocdn.net/friends/www/talk/kakaofriends_talk_2018.png"
         subtitle="카카오 프렌즈 특별 한정판"

@@ -15,7 +15,7 @@ const BaseGoodsItem = ({
 }: BaseGoodsItemProps) => {
   return (
     <div css={containerStyle}>
-      <div css={imageContainterStyle}>{imageComponent}</div>
+      {imageComponent}
       <div css={textContainerStyle}>
         <p css={subtitleStyle}>{subtitle}</p>
         <h2 css={titleStyle}>{title}</h2>
@@ -34,11 +34,6 @@ const containerStyle = css({
   gap: '1rem',
   alignItems: 'center',
   backgroundColor: '#ffffff',
-});
-
-const imageContainterStyle = css({
-  width: '100%',
-  height: 'auto',
 });
 
 const textContainerStyle = css({

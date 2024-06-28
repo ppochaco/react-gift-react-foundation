@@ -4,7 +4,26 @@ import React from 'react';
 export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   ratio?: number | 'square';
   radius?: number | 'circle';
+  width: string;
 }
+
+const Image = ({ ratio = 16 / 9, radius = 0, width, ...props }: ImageProps) => {
+  return (
+    <div css={boxStyle(width)}>
+      <div css={wrapperStyle(ratio)}>
+        <img css={imageStyle(radius)} {...props} />
+      </div>
+    </div>
+  );
+};
+
+export default Image;
+
+const boxStyle = (boxWidth: string) =>
+  css({
+    width: boxWidth,
+    height: 'auto',
+  });
 
 const getRatioPadding = (ratio: number | 'square'): string => {
   if (ratio === 'square') {
@@ -38,13 +57,3 @@ export const imageStyle = (radius?: number | 'circle') =>
     objectFit: 'cover',
     borderRadius: radius !== undefined ? getBorderRadius(radius) : '0',
   });
-
-const Image = ({ ratio = 16 / 9, radius = 0, ...props }: ImageProps) => {
-  return (
-    <div css={wrapperStyle(ratio)}>
-      <img css={imageStyle(radius)} {...props} />
-    </div>
-  );
-};
-
-export default Image;

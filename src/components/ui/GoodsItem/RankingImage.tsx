@@ -45,7 +45,13 @@ const RankedImage = ({
   return (
     <div css={imageWrapperStyle}>
       <div css={rankingStyle(rank)}>{rank}</div>
-      <Image src={imageSrc} alt={alt} ratio={ratio} radius={radius} />
+      <Image
+        width="8rem"
+        src={imageSrc}
+        alt={alt}
+        ratio={ratio}
+        radius={radius}
+      />
     </div>
   );
 };

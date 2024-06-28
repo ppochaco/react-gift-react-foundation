@@ -12,7 +12,13 @@ const GoodsItem = ({ imageSrc, subtitle, title, amount }: GoodsItemProps) => {
   return (
     <BaseGoodsItem
       imageComponent={
-        <Image src={imageSrc} alt={title} ratio="square" radius={5} />
+        <Image
+          width="8rem"
+          src={imageSrc}
+          alt={title}
+          ratio="square"
+          radius={5}
+        />
       }
       subtitle={subtitle}
       title={title}
