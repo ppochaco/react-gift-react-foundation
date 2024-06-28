@@ -18,14 +18,14 @@ interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   alignItems?: AlignItems;
 }
 
-const Container: React.FC<ContainerProps> = ({
+export const Container = ({
   children,
   maxWidth,
   flexDirection = 'row',
   justifyContent,
   alignItems,
   ...rest
-}) => {
+}: ContainerProps) => {
   return (
     <div
       css={containerStyle(maxWidth, flexDirection, justifyContent, alignItems)}
@@ -49,5 +49,3 @@ const containerStyle = (
     justifyContent,
     alignItems,
   });
-
-export default Container;
