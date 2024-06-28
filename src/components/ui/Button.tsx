@@ -2,15 +2,8 @@ import { CSSObject, css } from '@emotion/react';
 import { ButtonHTMLAttributes } from 'react';
 
 const themeStyles: {
-  [key in 'primary' | 'kakao' | 'ghost']: CSSObject;
+  [key in 'kakao' | 'outline' | 'black' | 'lightGray' | 'darkGray']: CSSObject;
 } = {
-  primary: {
-    backgroundColor: '#222222',
-    color: '#FFFFFF',
-    '&:hover': {
-      backgroundColor: '#1a1a1a',
-    },
-  },
   kakao: {
     backgroundColor: '#FEE501',
     color: '#3C1D1E',
@@ -18,24 +11,45 @@ const themeStyles: {
       backgroundColor: '#f2da00',
     },
   },
-  ghost: {
+  outline: {
     backgroundColor: 'transparent',
     color: '#222222',
-    border: '1px solid #ececec',
+    border: '1.2px solid #e0e0e0',
     '&:hover': {
       backgroundColor: '#efefef',
+    },
+  },
+  black: {
+    backgroundColor: '#000000',
+    color: '#FFFFFF',
+    '&:hover': {
+      backgroundColor: '#222222',
+    },
+  },
+  lightGray: {
+    backgroundColor: '#dddddd',
+    color: '#000000',
+    '&:hover': {
+      backgroundColor: '#cccccc',
+    },
+  },
+  darkGray: {
+    backgroundColor: '#222222',
+    color: '#FFFFFF',
+    '&:hover': {
+      backgroundColor: '#1a1a1a',
     },
   },
 };
 
 const sizeStyles: {
-  [key in 'sm' | 'md' | 'response']: CSSObject;
+  [key in 'small' | 'large' | 'response']: CSSObject;
 } = {
-  sm: {
+  small: {
     height: '2rem',
     padding: '0 1rem',
   },
-  md: {
+  large: {
     height: '2.25rem',
     padding: '0 2rem',
   },
@@ -53,16 +67,16 @@ const sizeStyles: {
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  theme?: 'primary' | 'kakao' | 'ghost';
-  size?: 'sm' | 'md' | 'response';
+  theme?: 'kakao' | 'outline' | 'black' | 'lightGray' | 'darkGray';
+  size?: 'small' | 'large' | 'response';
 }
 
 const Button = ({
   className = '',
   children,
   onClick,
-  theme = 'primary',
-  size = 'sm',
+  theme = 'kakao',
+  size = 'small',
   ...props
 }: ButtonProps) => {
   const buttonStyle = css({
