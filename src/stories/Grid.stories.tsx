@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Grid } from '@/components/ui/Grid';
 
@@ -6,7 +7,7 @@ const NumberNode = () => {
   return (
     <>
       {[...Array(16)].map((_, index) => (
-        <div key={index}>{index + 1}</div>
+        <div key={uuidv4()}>{index + 1}</div>
       ))}
     </>
   );
