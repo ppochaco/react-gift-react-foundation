@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button/Button';
 
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
   parameters: {
@@ -16,14 +16,12 @@ const meta = {
       options: ['kakao', 'outline', 'black', 'lightGray', 'darkGray'],
     },
     size: {
-      control: {
-        type: 'select',
-        options: ['small', 'large', 'response'],
-      },
+      control: 'select',
+      options: ['small', 'large', 'response'],
     },
   },
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

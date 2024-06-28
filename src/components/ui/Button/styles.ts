@@ -1,7 +1,8 @@
 import { CSSObject, css } from '@emotion/react';
-import { ButtonHTMLAttributes } from 'react';
 
-const themeStyles: {
+import { Size, Theme } from '@/types/uiTypes';
+
+export const themeStyles: {
   [key in 'kakao' | 'outline' | 'black' | 'lightGray' | 'darkGray']: CSSObject;
 } = {
   kakao: {
@@ -42,7 +43,7 @@ const themeStyles: {
   },
 };
 
-const sizeStyles: {
+export const sizeStyles: {
   [key in 'small' | 'large' | 'response']: CSSObject;
 } = {
   small: {
@@ -66,33 +67,9 @@ const sizeStyles: {
   },
 };
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  theme?: 'kakao' | 'outline' | 'black' | 'lightGray' | 'darkGray';
-  size?: 'small' | 'large' | 'response';
-}
-
-export const Button = ({
-  className = '',
-  children,
-  onClick,
-  theme = 'kakao',
-  size = 'small',
-  ...props
-}: ButtonProps) => {
-  const buttonStyle = css({
+export const buttonStyle = (theme: Theme, size: Size) =>
+  css({
     borderRadius: '0.25rem',
     ...themeStyles[theme],
     ...sizeStyles[size],
   });
-
-  return (
-    <button
-      className={className}
-      onClick={onClick}
-      css={buttonStyle}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-};

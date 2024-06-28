@@ -1,5 +1,5 @@
+import { RankedImage } from '../Image/RankingImage';
 import { BaseGoodsItem } from './BaseGoodsItem';
-import { RankedImage } from './RankingImage';
 
 interface RankingGoodsItemProps {
   rank: number;

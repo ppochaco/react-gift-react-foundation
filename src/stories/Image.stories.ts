@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Image, ImageProps } from '@/components/ui/Image';
+import { Image } from '@/components/ui/Image/Image';
 
-const meta = {
+const meta: Meta<typeof Image> = {
   title: 'Example/Image',
   component: Image,
   parameters: {
@@ -29,10 +29,10 @@ const meta = {
     width: '200px',
     src: 'https://t1.kakaocdn.net/friends/www/talk/kakaofriends_talk_2018.png',
   },
-} satisfies Meta<ImageProps>;
+};
 
 export default meta;
-type Story = StoryObj<ImageProps>;
+type Story = StoryObj<typeof Image>;
 
 export const Default: Story = {
   args: {

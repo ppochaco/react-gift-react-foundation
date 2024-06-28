@@ -1,4 +1,10 @@
-import { css } from '@emotion/react';
+import {
+  amountStyle,
+  containerStyle,
+  subtitleStyle,
+  textContainerStyle,
+  titleStyle,
+} from './styles';
 
 interface BaseGoodsItemProps {
   imageComponent: React.ReactNode;
@@ -6,48 +12,6 @@ interface BaseGoodsItemProps {
   title: string;
   amount: string;
 }
-
-const containerStyle = css({
-  display: 'flex',
-  flexDirection: 'column',
-  width: '8rem',
-  gap: '1rem',
-  alignItems: 'center',
-  backgroundColor: '#ffffff',
-});
-
-const textContainerStyle = css({
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
-});
-
-const titleStyle = css({
-  fontSize: '0.9rem',
-  margin: '0 0 8px 0',
-  display: '-webkit-box',
-  WebkitLineClamp: 2,
-  WebkitBoxOrient: 'vertical',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-});
-
-const subtitleStyle = css({
-  fontSize: '0.9rem',
-  color: '#757575',
-  margin: '0 0 4px 0',
-  whiteSpace: 'nowrap',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-});
-
-const amountStyle = css({
-  fontSize: '1.3rem',
-  fontWeight: 'bold',
-  color: '#000000',
-  margin: '0',
-  wordBreak: 'break-all',
-});
 
 export const BaseGoodsItem = ({
   imageComponent,

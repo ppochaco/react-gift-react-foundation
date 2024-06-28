@@ -9,8 +9,8 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
-    'plugin:prettier/recommended',
     'plugin:storybook/recommended',
+    'plugin:prettier/recommended',
   ],
   overrides: [
     {
@@ -36,7 +36,7 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.app.json'],
   },
-  plugins: ['@typescript-eslint', 'react', 'prettier'],
+  plugins: ['@typescript-eslint', 'react'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/button-has-type': 'off',
@@ -50,17 +50,8 @@ module.exports = {
     ],
     'import/no-default-export': 'off',
     'import/prefer-default-export': 'off',
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        '': 'never',
-        ts: 'never',
-        tsx: 'never',
-        js: 'never',
-        jsx: 'never',
-      },
-    ],
+    'import/extensions': 'off',
+    'prettier/prettier': 'error',
   },
   settings: {
     'import/resolver': {

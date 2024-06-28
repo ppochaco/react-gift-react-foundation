@@ -23,12 +23,6 @@ const meta: Meta<typeof GoodsItem> = {
       control: 'text',
     },
   },
-  args: {
-    imageSrc: 'https://via.placeholder.com/150',
-    subtitle: 'Example Subtitle',
-    title: 'Example Title',
-    amount: '$100',
-  },
 };
 
 export default meta;

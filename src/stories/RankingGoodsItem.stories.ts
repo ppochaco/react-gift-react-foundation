@@ -28,13 +28,6 @@ const meta: Meta<typeof RankingGoodsItem> = {
       control: 'text',
     },
   },
-  args: {
-    rank: 1,
-    imageSrc: 'https://via.placeholder.com/150',
-    subtitle: 'Example Subtitle',
-    title: 'Example Title',
-    amount: '$100',
-  },
 };
 
 export default meta;

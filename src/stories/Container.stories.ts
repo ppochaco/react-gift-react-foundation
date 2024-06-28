@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Container } from '@/components/ui/Container';
+import { Container } from '@/components/ui/Layout/Container';
 
 const meta: Meta<typeof Container> = {
-  title: 'Example/Container',
+  title: 'Example/Layout/Container',
   component: Container,
   parameters: {
     layout: 'centered',
@@ -15,31 +15,24 @@ const meta: Meta<typeof Container> = {
     },
     children: {
       control: 'text',
-      defaultValue: 'Container Content',
     },
     flexDirection: {
-      control: {
-        type: 'radio',
-        options: ['row', 'column'],
-      },
+      control: 'radio',
+      options: ['row', 'column'],
     },
     justifyContent: {
-      control: {
-        type: 'radio',
-        options: [
-          'center',
-          'flex-start',
-          'flex-end',
-          'space-between',
-          'space-around',
-        ],
-      },
+      control: 'radio',
+      options: [
+        'center',
+        'flex-start',
+        'flex-end',
+        'space-between',
+        'space-around',
+      ],
     },
     alignItems: {
-      control: {
-        type: 'radio',
-        options: ['center', 'flex-start', 'flex-end', 'baseline', 'stretch'],
-      },
+      control: 'radio',
+      options: ['center', 'flex-start', 'flex-end', 'baseline', 'stretch'],
     },
   },
 };
