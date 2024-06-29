@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { DEFAULT_IMAGE_URL } from '@/constants/data';
+
 import { RankingGoodsItem } from '@/components/ui/GoodsItem/RankingGoodsItem';
 
 const meta: Meta<typeof RankingGoodsItem> = {
@@ -36,8 +38,7 @@ type Story = StoryObj<typeof RankingGoodsItem>;
 export const Default: Story = {
   args: {
     rank: 1,
-    imageSrc:
-      'https://t1.kakaocdn.net/friends/www/talk/kakaofriends_talk_2018.png',
+    imageSrc: DEFAULT_IMAGE_URL,
     subtitle: '카카오 프렌즈 특별 한정판',
     title: '[특가] 카카오 프렌즈 특별 한정판 브라이트 쿠션',
     amount: '100000000000',

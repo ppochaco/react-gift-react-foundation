@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { DEFAULT_IMAGE_URL } from '@/constants/data';
+
 import { Image } from '@/components/ui/Image/Image';
 
 const meta: Meta<typeof Image> = {
@@ -27,7 +29,7 @@ const meta: Meta<typeof Image> = {
   },
   args: {
     width: '200px',
-    src: 'https://t1.kakaocdn.net/friends/www/talk/kakaofriends_talk_2018.png',
+    src: DEFAULT_IMAGE_URL,
   },
 };
 
