@@ -87,7 +87,7 @@ FE 카카오 선물하기 1주차 과제: React 기초
 
 ### 4. 구현한 Storybook
 
-[story book 보러가기](https://667f189885180b31652d244f-hjkdfuqavt.chromatic.com/)
+[story book 보러가기](https://667f189885180b31652d244f-errhsyheob.chromatic.com/)
 
 ### 5. 구현한 기능 목록
 
