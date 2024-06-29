@@ -36,7 +36,7 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.app.json'],
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'import'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/button-has-type': 'off',
