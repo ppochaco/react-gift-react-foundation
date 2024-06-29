@@ -34,17 +34,11 @@ const meta: Meta<typeof Image> = {
 export default meta;
 type Story = StoryObj<typeof Image>;
 
-export const Default: Story = {
-  args: {
-    ratio: 16 / 9,
-    radius: 0,
-  },
-};
+export const Default: Story = {};
 
 export const RatioSquare: Story = {
   args: {
     ratio: 'square',
-    radius: 0,
   },
 };
 
@@ -57,7 +51,6 @@ export const RadiusCircle: Story = {
 
 export const RadiusRound: Story = {
   args: {
-    ratio: 16 / 9,
     radius: 16,
   },
 };
