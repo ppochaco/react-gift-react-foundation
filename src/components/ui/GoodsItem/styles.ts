@@ -9,7 +9,7 @@ export const containerStyle = css({
   backgroundColor: '#ffffff',
 });
 
-export const textContainerStyle = css({
+export const detailContainerStyle = css({
   display: 'flex',
   flexDirection: 'column',
   width: '100%',

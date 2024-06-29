@@ -1,5 +1,6 @@
 import { RankedImage } from '../Image/RankingImage';
-import { BaseGoodsItem } from './BaseGoodsItem';
+import { GoodsItemDetail } from './GoodsItemDetail';
+import { containerStyle } from './styles';
 
 interface RankingGoodsItemProps {
   rank: number;
@@ -17,19 +18,15 @@ export const RankingGoodsItem = ({
   amount,
 }: RankingGoodsItemProps) => {
   return (
-    <BaseGoodsItem
-      imageComponent={
-        <RankedImage
-          rank={rank}
-          imageSrc={imageSrc}
-          alt={title}
-          ratio="square"
-          radius={5}
-        />
-      }
-      subtitle={subtitle}
-      title={title}
-      amount={amount}
-    />
+    <div css={containerStyle}>
+      <RankedImage
+        rank={rank}
+        imageSrc={imageSrc}
+        alt={title}
+        ratio="square"
+        radius={5}
+      />
+      <GoodsItemDetail subtitle={subtitle} title={title} amount={amount} />
+    </div>
   );
 };

@@ -1,6 +1,7 @@
 import { Image } from '@/components/ui/Image/Image';
 
-import { BaseGoodsItem } from './BaseGoodsItem';
+import { GoodsItemDetail } from './GoodsItemDetail';
+import { containerStyle } from './styles';
 
 interface GoodsItemProps {
   imageSrc: string;
@@ -16,19 +17,9 @@ export const GoodsItem = ({
   amount,
 }: GoodsItemProps) => {
   return (
-    <BaseGoodsItem
-      imageComponent={
-        <Image
-          width="8rem"
-          src={imageSrc}
-          alt={title}
-          ratio="square"
-          radius={5}
-        />
-      }
-      subtitle={subtitle}
-      title={title}
-      amount={amount}
-    />
+    <div css={containerStyle}>
+      <Image width="8rem" src={imageSrc} ratio="square" radius={5} />
+      <GoodsItemDetail subtitle={subtitle} title={title} amount={amount} />
+    </div>
   );
 };
