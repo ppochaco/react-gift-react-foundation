@@ -1,5 +1,6 @@
 import { Image } from '@/components/ui/Image/Image';
 
+import { Container } from '../Layout/Container';
 import { rankingStyle, rankingWrapperStyle } from './styles';
 
 type RankedImageProps = {
@@ -19,7 +20,13 @@ export const RankedImage = ({
 }: RankedImageProps) => {
   return (
     <div css={rankingWrapperStyle}>
-      <div css={rankingStyle(rank)}>{rank}</div>
+      <Container
+        justifyContent="center"
+        alignItems="center"
+        css={rankingStyle(rank)}
+      >
+        {rank}
+      </Container>
       <Image
         width="8rem"
         src={imageSrc}

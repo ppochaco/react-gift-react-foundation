@@ -1,5 +1,7 @@
 import { ImgHTMLAttributes } from 'react';
 
+import { DEFAULT_RADIUS, DEFAULT_RATIO } from '@/constants/styles';
+
 import { boxStyle, imageStyle, wrapperStyle } from './styles';
 
 interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
@@ -9,8 +11,8 @@ interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
 }
 
 export const Image = ({
-  ratio = 16 / 9,
-  radius = 0,
+  ratio = DEFAULT_RATIO,
+  radius = DEFAULT_RADIUS,
   width,
   alt,
   ...props

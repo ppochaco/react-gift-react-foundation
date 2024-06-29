@@ -1,5 +1,6 @@
-import { RankedImage } from '../Image/RankingImage';
-import { Container } from '../Layout/Container';
+import { RankedImage } from '@/components/ui/Image/RankingImage';
+import { Container } from '@/components/ui/Layout/Container';
+
 import { GoodsItemDetail } from './GoodsItemDetail';
 import { containerStyle } from './styles';
 
