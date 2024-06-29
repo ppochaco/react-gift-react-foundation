@@ -1,26 +1,6 @@
 import { CSSObject, css } from '@emotion/react';
 
-export const inputStateStyles: {
-  [key in 'default' | 'invalid' | 'disabled']: CSSObject;
-} = {
-  default: {
-    color: '#222222',
-    '&:focus': {
-      borderColor: '#000000',
-    },
-  },
-  invalid: {
-    borderColor: '#f99393',
-    '&:focus': {
-      borderColor: '#ff0000',
-    },
-  },
-  disabled: {
-    color: '#aaaaaa',
-    backgroundColor: '#f5f5f5',
-    cursor: 'not-allowed',
-  },
-};
+import { colors } from '@/styles/theme';
 
 export const inputSizeStyles: {
   [key in 'small' | 'large' | 'response']: CSSObject;
@@ -46,6 +26,26 @@ export const inputSizeStyles: {
   },
 };
 
+export const inputStateStyles: {
+  [key in 'default' | 'invalid' | 'disabled']: CSSObject;
+} = {
+  default: {
+    '&:focus': {
+      borderColor: colors.gray[400],
+    },
+  },
+  invalid: {
+    borderColor: colors.pink,
+    '&:focus': {
+      borderColor: colors.red,
+    },
+  },
+  disabled: {
+    backgroundColor: colors.gray[100],
+    cursor: 'not-allowed',
+  },
+};
+
 export const inputStyle = ({
   size,
   invalid,
@@ -56,7 +56,7 @@ export const inputStyle = ({
   disabled: boolean;
 }) =>
   css({
-    borderBottom: '1px solid #cccccc',
+    borderBottom: `1px solid ${colors.gray[300]}`,
     outline: 'none',
     padding: '0 0.5rem',
     ...inputSizeStyles[size],

@@ -12,5 +12,6 @@ export const colors = {
   },
   black: '#000000',
   white: '#FFFFFF',
-  pink: '#FF7788',
+  pink: '#F99393',
+  red: '#FF0000',
 };

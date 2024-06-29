@@ -1,23 +1,20 @@
-import { Image } from '@/components/ui/Image/Image';
+import {
+  GOODS_IMAGE_DEFAULT_RADIUS,
+  GOODS_IMAGE_DEFAULT_RATIO,
+} from '@/constants/styles';
 
-import { Container } from '../Layout/Container';
+import { Image } from '@/components/ui/Image/Image';
+import { Container } from '@/components/ui/Layout/Container';
+
 import { rankingStyle, rankingWrapperStyle } from './styles';
 
 type RankedImageProps = {
   rank: number;
   imageSrc: string;
   alt: string;
-  ratio?: number | 'square';
-  radius?: number | 'circle';
 };
 
-export const RankedImage = ({
-  rank,
-  imageSrc,
-  alt,
-  ratio = 16 / 9,
-  radius = 0,
-}: RankedImageProps) => {
+export const RankedImage = ({ rank, imageSrc, alt }: RankedImageProps) => {
   return (
     <div css={rankingWrapperStyle}>
       <Container
@@ -31,8 +28,8 @@ export const RankedImage = ({
         width="8rem"
         src={imageSrc}
         alt={alt}
-        ratio={ratio}
-        radius={radius}
+        ratio={GOODS_IMAGE_DEFAULT_RATIO}
+        radius={GOODS_IMAGE_DEFAULT_RADIUS}
       />
     </div>
   );

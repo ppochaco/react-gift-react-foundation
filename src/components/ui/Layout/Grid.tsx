@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 
+import { GRID_DEFAULT_COLUMNS, GRID_DEFAULT_GAP } from '@/constants/styles';
 import { Column } from '@/types/uiTypes';
 
 import { gridStyle } from './styles';
@@ -11,8 +12,8 @@ type GridProps = {
 };
 
 export const Grid = ({
-  gap = 0,
-  columns = { initial: 1, lg: 4, md: 3, sm: 2 },
+  gap = GRID_DEFAULT_GAP,
+  columns = GRID_DEFAULT_COLUMNS,
   children,
 }: GridProps) => {
   return <div css={gridStyle(gap, columns)}>{children}</div>;

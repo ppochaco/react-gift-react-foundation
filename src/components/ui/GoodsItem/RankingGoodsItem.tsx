@@ -26,13 +26,7 @@ export const RankingGoodsItem = ({
       alignItems="center"
       css={containerStyle}
     >
-      <RankedImage
-        rank={rank}
-        imageSrc={imageSrc}
-        alt={title}
-        ratio="square"
-        radius={5}
-      />
+      <RankedImage rank={rank} imageSrc={imageSrc} alt={title} />
       <GoodsItemDetail subtitle={subtitle} title={title} amount={amount} />
     </Container>
   );

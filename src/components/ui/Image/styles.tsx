@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import { CIRCLE_RADIUS } from '@/constants/styles';
+import { IMAGE_CIRCLE_RADIUS } from '@/constants/styles';
 import { colors } from '@/styles/theme';
 
 const getRatioPadding = (ratio: number | 'square'): string => {
@@ -12,7 +12,7 @@ const getRatioPadding = (ratio: number | 'square'): string => {
 
 const getBorderRadius = (radius: number | 'circle'): string => {
   if (radius === 'circle') {
-    return CIRCLE_RADIUS;
+    return IMAGE_CIRCLE_RADIUS;
   }
   return `${radius}px`;
 };
