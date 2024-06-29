@@ -1,3 +1,5 @@
+import { Container } from '@/components/ui/Layout/Container';
+
 import {
   amountStyle,
   detailContainerStyle,
@@ -17,10 +19,14 @@ export const GoodsItemDetail = ({
   amount,
 }: GoodsItemDetailProps) => {
   return (
-    <div css={detailContainerStyle}>
+    <Container
+      flexDirection="column"
+      maxWidth="100%"
+      css={detailContainerStyle}
+    >
       <p css={subtitleStyle}>{subtitle}</p>
       <h2 css={titleStyle}>{title}</h2>
       <p css={amountStyle}>{amount}원</p>
-    </div>
+    </Container>
   );
 };

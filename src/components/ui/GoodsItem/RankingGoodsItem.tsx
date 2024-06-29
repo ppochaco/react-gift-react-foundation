@@ -1,4 +1,5 @@
 import { RankedImage } from '../Image/RankingImage';
+import { Container } from '../Layout/Container';
 import { GoodsItemDetail } from './GoodsItemDetail';
 import { containerStyle } from './styles';
 
@@ -18,7 +19,12 @@ export const RankingGoodsItem = ({
   amount,
 }: RankingGoodsItemProps) => {
   return (
-    <div css={containerStyle}>
+    <Container
+      maxWidth="8rem"
+      flexDirection="column"
+      alignItems="center"
+      css={containerStyle}
+    >
       <RankedImage
         rank={rank}
         imageSrc={imageSrc}
@@ -27,6 +33,6 @@ export const RankingGoodsItem = ({
         radius={5}
       />
       <GoodsItemDetail subtitle={subtitle} title={title} amount={amount} />
-    </div>
+    </Container>
   );
 };
