@@ -85,9 +85,9 @@ FE 카카오 선물하기 1주차 과제: React 기초
   └── utils // 유틸리티 함수
 ```
 
-### 4. 구현한 Storybook
+### 4. 구현한 컴포넌트
 
-[story book 보러가기](https://667f189885180b31652d244f-errhsyheob.chromatic.com/)
+[story book 보러가기](https://667f189885180b31652d244f-wvfpkxjzuu.chromatic.com/)
 
 ### 5. 구현한 기능 목록
 
